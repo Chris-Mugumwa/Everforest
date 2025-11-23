@@ -3,12 +3,12 @@
 * {
   border: none;
   font-family: CommitMono Nerd Font;
-  font-size: 18px;
-  min-height: 28px;
+  font-size: 20px;
+  min-height: 32px;
 }
 
 window#waybar {
-  background: @base;
+  background: rgba(30, 35, 38, 0.85);
   color: @color8;
 }
 
@@ -23,6 +23,7 @@ tooltip {
 #backlight,
 #cpu,
 #custom-swaync,
+#custom-weather,
 #memory,
 #network,
 #pulseaudio,
@@ -121,8 +122,12 @@ tooltip {
 #custom-swaync {
   color: @color1;
   margin-right: 10px;
-  margin-right: 10px;
   padding-right: 18px;
+}
+
+#custom-weather {
+  color: @color2;
+  margin-right: 10px;
 }
 
 #network {

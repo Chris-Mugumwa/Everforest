@@ -2,14 +2,25 @@
 
 THEME_DIR="$HOME/.config"
 THEME_STATE="$HOME/.config/hypr/.current-theme"
-THEMES=("catppuccin-mocha" "everforest" "nightowl")
 
-# Use rofi to select theme
-SELECTED_THEME=$(printf '%s\n' "${THEMES[@]}" | rofi -dmenu -i -p "Select Theme" -theme-str 'window {width: 400px;}')
+# Display names for rofi
+DISPLAY_THEMES=("Catppuccin Mocha" "Everforest" "Nightowl")
 
-if [ -z "$SELECTED_THEME" ]; then
+# Map display names to config names
+declare -A THEME_MAP
+THEME_MAP["Catppuccin Mocha"]="catppuccin-mocha"
+THEME_MAP["Everforest"]="everforest"
+THEME_MAP["Nightowl"]="nightowl"
+
+# Use rofi to select theme (show capitalized names)
+SELECTED_DISPLAY=$(printf '%s\n' "${DISPLAY_THEMES[@]}" | rofi -dmenu -i -p "Select Theme" -theme-str 'window {width: 400px;}')
+
+if [ -z "$SELECTED_DISPLAY" ]; then
     exit 0
 fi
+
+# Get the config name from display name
+SELECTED_THEME="${THEME_MAP[$SELECTED_DISPLAY]}"
 
 # Save selected theme to state file for persistence
 echo "$SELECTED_THEME" > "$THEME_STATE"

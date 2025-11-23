@@ -17,6 +17,7 @@
     "modules-right": [
         "tray",
         "network",
+        "custom/weather",
         "pulseaudio",
         "clock",
         "custom/swaync"
@@ -68,9 +69,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "󰥔 {:%H:%M}  󰃭 {:%a %d}",
+        "format": "󰥔 %H:%M  󰃭 %a %d",
         "on-click": "eww open Calendar --toggle --config ~/.config/eww/applets/",
-        "tooltip-format": "{:%A %d %B %Y}"
+        "tooltip-format": "%A %d %B %Y"
     },
     "custom/swaync": {
         "tooltip": false,
@@ -121,5 +122,13 @@
                 " "
             ]
         }
+    },
+    "custom/weather": {
+        "format": "{}",
+        "interval": 1800,
+        "exec": "curl -s 'wttr.in/?format=%c+%t' | sed 's/+//g'",
+        "return-type": "",
+        "tooltip": true,
+        "exec-tooltip": "curl -s 'wttr.in/?format=3'"
     }
 }

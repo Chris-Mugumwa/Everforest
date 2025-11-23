@@ -114,8 +114,12 @@ if type -q kitty
 else 
 end
 
-#### Calling exernal scripts ####
-source ~/.secret.fish
-source ~/.config/fish/completions/alias.fish
+#### Calling external scripts ####
+# Source secrets file if it exists (for API keys, tokens, etc)
+if test -f ~/.secret.fish
+    source ~/.secret.fish
+end
+
+source ~/.config/fish/completions/aliases.fish
 source ~/.config/lf/icons/icons
 
