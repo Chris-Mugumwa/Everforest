@@ -17,18 +17,22 @@ echo "$SELECTED_THEME" > "$THEME_STATE"
 # Update Rofi theme
 ROFI_CONF="$THEME_DIR/rofi/config.rasi"
 ROFI_POWERMENU_CONF="$THEME_DIR/rofi/powermenu/config.rasi"
+ROFI_WALLPAPER_CONF="$THEME_DIR/rofi/wallpaper.rasi"
 case $SELECTED_THEME in
     "catppuccin-mocha")
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/catppuccin-mocha.rasi"|' "$ROFI_CONF"
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/catppuccin-mocha.rasi"|' "$ROFI_POWERMENU_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/catppuccin-mocha.rasi"|' "$ROFI_WALLPAPER_CONF"
         ;;
     "everforest")
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/everforest.rasi"|' "$ROFI_CONF"
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/everforest.rasi"|' "$ROFI_POWERMENU_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/everforest.rasi"|' "$ROFI_WALLPAPER_CONF"
         ;;
     "nightowl")
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/nightowl.rasi"|' "$ROFI_CONF"
         sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/nightowl.rasi"|' "$ROFI_POWERMENU_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/nightowl.rasi"|' "$ROFI_WALLPAPER_CONF"
         ;;
 esac
 
