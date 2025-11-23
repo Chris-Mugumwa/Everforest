@@ -38,7 +38,9 @@
         "active-only": false,
         "on-scroll-up": "hyprctl dispatch workspace -1",
         "on-scroll-down": "hyprctl dispatch workspace +1",
-        "persistent_workspaces": {}
+        "persistent-workspaces": {
+            "*": 10
+        }
     },
     "cpu": {
         "interval": 5,
@@ -61,7 +63,7 @@
         "ignored-players": ["firefox", "chromium", "brave"]
     },
     "tray": {
-        "icon-size": 24,
+        "icon-size": 32,
         "tooltip": false,
         "spacing": 10
     },
