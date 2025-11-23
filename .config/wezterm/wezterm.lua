@@ -13,7 +13,7 @@ return {
 	window_background_opacity = 1,
 	default_cursor_style = "BlinkingUnderline",
 	front_end = "OpenGL",
-
+An
 	-- TAB BAR
 	enable_tab_bar = true,
 	tab_bar_at_bottom = false,

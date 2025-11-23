@@ -34,7 +34,7 @@
             "urgent": "󰊠"
         },
         "persistent_workspaces": {
-            "*": 5
+            "*": 6
         }
     },
     "cpu": {
@@ -58,7 +58,7 @@
         "ignored-players": ["firefox", "chromium", "brave"]
     },
     "tray": {
-        "icon-size": 15,
+        "icon-size": 20,
         "tooltip": false,
         "spacing": 10
     },

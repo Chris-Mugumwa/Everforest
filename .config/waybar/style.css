@@ -1,7 +1,7 @@
 * {
   border: none;
   font-family: CommitMono Nerd Font;
-  font-size: 14px;
+  font-size: 16px;
   min-height: 0;
 }
 
@@ -115,6 +115,8 @@ tooltip {
   color: @color6;
   font-weight: 600;
   margin-right: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 #custom-swaync {
