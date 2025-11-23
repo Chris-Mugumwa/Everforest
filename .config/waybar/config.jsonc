@@ -58,12 +58,12 @@
         "ignored-players": ["firefox", "chromium", "brave"]
     },
     "tray": {
-        "icon-size": 20,
+        "icon-size": 24,
         "tooltip": false,
         "spacing": 10
     },
     "clock": {
-        "format": "{:󰥔 %R  󰃭 %A %d}",
+        "format": "󰥔 {:%H:%M}  󰃭 {:%a %d}",
         "on-click": "eww open Calendar --toggle --config ~/.config/eww/applets/",
         "tooltip-format": "{:%A %d %B %Y}"
     },

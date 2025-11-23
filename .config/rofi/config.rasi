@@ -1,5 +1,5 @@
 configuration {
-    font: "Cantarell Bold 11";
+    font: "Cantarell Bold 12";
     drun {
         display-name: " ";
     }
@@ -18,7 +18,7 @@ configuration {
 window {
     background-color: @background;
     border:           3;
-    border-radius:    0;
+    border-radius:    10px;
     border-color:     @active;
     padding:          8;
     width:  500px;
@@ -47,7 +47,7 @@ listview {
 element {
     border:  0;
     padding: 6px ;
-    border-radius: 2px;
+    border-radius: 8px;
 } 
 element.normal.normal {
     background-color: @background;
@@ -87,6 +87,7 @@ inputbar {
     text-color: @selected;
     padding:    10px;
     margin:     0   4px;
+    border-radius: 8px;
     background-color: @background-alt;
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
 }
@@ -114,7 +115,7 @@ element-text {
     vertical-align: 0.5;
 }
 element-icon {
-    size: 1.4em;
+    size: 1.8em;
     background-color: transparent;
 }
 textbox-prompt-colon {
