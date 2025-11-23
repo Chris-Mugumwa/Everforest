@@ -3,8 +3,8 @@
 * {
   border: none;
   font-family: CommitMono Nerd Font;
-  font-size: 18px;
-  min-height: 28px;
+  font-size: 12px;
+  min-height: 12px;
 }
 
 window#waybar {
