@@ -5,7 +5,7 @@
     "exclusive": true,
     "passtrough": false,
     "gtk-layer-shell": true,
-    "height": 0,
+    "height": 40,
     "modules-left": [
         "hyprland/workspaces",
         "cpu",
@@ -33,9 +33,12 @@
             "active": "󰮯",
             "urgent": "󰊠"
         },
-        "persistent_workspaces": {
-            "*": 6
-        }
+        "disable-scroll": false,
+        "all-outputs": true,
+        "active-only": false,
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
+        "persistent_workspaces": {}
     },
     "cpu": {
         "interval": 5,
