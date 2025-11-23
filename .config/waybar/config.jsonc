@@ -64,7 +64,7 @@
         "ignored-players": ["firefox", "chromium", "brave"]
     },
     "tray": {
-        "icon-size": 32,
+        "icon-size": 50,
         "tooltip": false,
         "spacing": 10
     },
