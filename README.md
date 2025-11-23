@@ -12,23 +12,36 @@
 
 ## Contents
 
+### Window Managers & Compositors
 - [hyprland](https://github.com/ImRayy/dotfiles/tree/master/.config/hypr)
 - [bspwm](https://github.com/ImRayy/dotfiles/tree/master/.config/bspwm)
+
+### Status Bars & UI
 - [waybar](https://github.com/ImRayy/dotfiles/tree/master/.config/waybar)
 - [polybar](https://github.com/adi1090x/polybar-themes)
 - [rofi](https://github.com/ImRayy/dotfiles/tree/master/.config/rofi)
 - [eww](https://github.com/ImRayy/dotfiles/tree/master/.config/eww/applets)
+- [dunst](https://github.com/ImRayy/dotfiles/blob/master/.config/dunst)
+- [swaync](https://github.com/ImRayy/dotfiles/tree/master/.config/swaync)
+
+### Terminals & Shells
 - [kitty](https://github.com/ImRayy/dotfiles/tree/master/.config/kitty)
 - [wezterm](https://github.com/ImRayy/dotfiles/tree/master/.config/wezterm)
 - [zsh](https://github.com/ImRayy/dotfiles/tree/master/.config/zsh)
 - [fish](https://github.com/ImRayy/dotfiles/tree/master/.config/fish)
 - [starship](https://github.com/ImRayy/dotfiles/blob/master/.config/starship.toml)
-- [neofetch](https://github.com/ImRayy/dotfiles/blob/master/.config/neofetch)
-- [lf](https://github.com/ImRayy/dotfiles/blob/master/.config/lf)
-- [dunst](https://github.com/ImRayy/dotfiles/blob/master/.config/dunst)
-- [swaync](https://github.com/ImRayy/dotfiles/tree/master/.config/swaync)
+
+### Applications
 - [neovim](https://github.com/ImRayy/dotfiles/blob/master/.config/nvim)
+- [firefox](https://github.com/ImRayy/dotfiles/tree/master/.config/firefox) - Everforest themed userChrome
+- [discord](https://github.com/ImRayy/dotfiles/tree/master/.config/discord) - Vencord themes (System24 variants)
+- [spotify](https://github.com/ImRayy/dotfiles/tree/master/.config/spotify) - Spicetify Everforest theme
+- [heroic-launcher](https://github.com/ImRayy/dotfiles/tree/master/.config/heroic-launcher) - Custom Everforest theme
+- [fastfetch](https://github.com/ImRayy/dotfiles/tree/master/.config/fastfetch) - System info with themes
 - [mpv](https://github.com/ImRayy/dotfiles/tree/master/.config/mpv)
+- [lf](https://github.com/ImRayy/dotfiles/blob/master/.config/lf)
+- [yazi](https://github.com/ImRayy/dotfiles/blob/master/.config/yazi)
+- [neofetch](https://github.com/ImRayy/dotfiles/blob/master/.config/neofetch)
 
 ## Fonts, Icons, Colorschemes & More
 

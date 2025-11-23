@@ -10,6 +10,24 @@ if [ -z "$SELECTED_THEME" ]; then
     exit 0
 fi
 
+# Update Rofi theme
+ROFI_CONF="$THEME_DIR/rofi/config.rasi"
+ROFI_POWERMENU_CONF="$THEME_DIR/rofi/powermenu/config.rasi"
+case $SELECTED_THEME in
+    "catppuccin-mocha")
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/catppuccin-mocha.rasi"|' "$ROFI_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/catppuccin-mocha.rasi"|' "$ROFI_POWERMENU_CONF"
+        ;;
+    "everforest")
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/everforest.rasi"|' "$ROFI_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/everforest.rasi"|' "$ROFI_POWERMENU_CONF"
+        ;;
+    "nightowl")
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/nightowl.rasi"|' "$ROFI_CONF"
+        sed -i 's|@import "colorschemes/.*\.rasi"|@import "colorschemes/nightowl.rasi"|' "$ROFI_POWERMENU_CONF"
+        ;;
+esac
+
 # Update Kitty theme
 KITTY_CONF="$THEME_DIR/kitty/kitty.conf"
 case $SELECTED_THEME in
@@ -26,7 +44,26 @@ case $SELECTED_THEME in
 esac
 
 # Reload Kitty config for all instances
-killall -SIGUSR1 kitty
+killall -SIGUSR1 kitty 2>/dev/null
+
+# Update Swaync theme
+SWAYNC_CONF="$THEME_DIR/swaync/config.json"
+SWAYNC_CSS="$THEME_DIR/swaync/style.css"
+case $SELECTED_THEME in
+    "catppuccin-mocha")
+        sed -i 's|@import "./colorschemes/.*\.css"|@import "./colorschemes/catppuccin-mocha.css"|' "$SWAYNC_CSS"
+        ;;
+    "everforest")
+        sed -i 's|@import "./colorschemes/.*\.css"|@import "./colorschemes/everforest.css"|' "$SWAYNC_CSS"
+        ;;
+    "nightowl")
+        sed -i 's|@import "./colorschemes/.*\.css"|@import "./colorschemes/nightowl.css"|' "$SWAYNC_CSS"
+        ;;
+esac
+
+# Restart swaync
+pkill swaync
+swaync &
 
 # Update Waybar theme
 pkill waybar
