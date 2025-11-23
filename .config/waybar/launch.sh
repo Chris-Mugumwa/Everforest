@@ -1,15 +1,20 @@
 #!/usr/bin/env bash
 
-THEME_DIR="$HOME/.config/waybar/colorschemes"
+WAYBAR_DIR="$HOME/.config/waybar"
+STYLE_CSS="$WAYBAR_DIR/style.css"
 
+# Update the @import line in style.css based on selected theme
 case $1 in
     --nightowl)
-        waybar -s "$THEME_DIR/nightowl.css"
+        sed -i '' 's|@import "colorschemes/.*\.css";|@import "colorschemes/nightowl.css";|' "$STYLE_CSS"
         ;;
     --everforest)
-        waybar -s "$THEME_DIR/everforest.css"
+        sed -i '' 's|@import "colorschemes/.*\.css";|@import "colorschemes/everforest.css";|' "$STYLE_CSS"
         ;;
     *)
-        waybar -s "$THEME_DIR/catppuccin-mocha.css"
+        sed -i '' 's|@import "colorschemes/.*\.css";|@import "colorschemes/catppuccin-mocha.css";|' "$STYLE_CSS"
         ;;
 esac
+
+# Launch waybar (it will use style.css by default)
+waybar

@@ -66,18 +66,22 @@ pkill swaync
 swaync &
 
 # Update Waybar theme
-pkill waybar
+WAYBAR_STYLE="$THEME_DIR/waybar/style.css"
 case $SELECTED_THEME in
     "catppuccin-mocha")
-        ~/.config/waybar/launch.sh &
+        sed -i 's|@import "colorschemes/.*\.css";|@import "colorschemes/catppuccin-mocha.css";|' "$WAYBAR_STYLE"
         ;;
     "everforest")
-        ~/.config/waybar/launch.sh --everforest &
+        sed -i 's|@import "colorschemes/.*\.css";|@import "colorschemes/everforest.css";|' "$WAYBAR_STYLE"
         ;;
     "nightowl")
-        ~/.config/waybar/launch.sh --nightowl &
+        sed -i 's|@import "colorschemes/.*\.css";|@import "colorschemes/nightowl.css";|' "$WAYBAR_STYLE"
         ;;
 esac
+
+# Restart waybar
+pkill waybar
+waybar &
 
 # Update Hyprland border colors (optional)
 case $SELECTED_THEME in
