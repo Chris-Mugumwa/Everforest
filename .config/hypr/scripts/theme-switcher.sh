@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 THEME_DIR="$HOME/.config"
+THEME_STATE="$HOME/.config/hypr/.current-theme"
 THEMES=("catppuccin-mocha" "everforest" "nightowl")
 
 # Use rofi to select theme
@@ -9,6 +10,9 @@ SELECTED_THEME=$(printf '%s\n' "${THEMES[@]}" | rofi -dmenu -i -p "Select Theme"
 if [ -z "$SELECTED_THEME" ]; then
     exit 0
 fi
+
+# Save selected theme to state file for persistence
+echo "$SELECTED_THEME" > "$THEME_STATE"
 
 # Update Rofi theme
 ROFI_CONF="$THEME_DIR/rofi/config.rasi"
