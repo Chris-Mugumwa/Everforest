@@ -1,4 +1,4 @@
-[mgr]
+[manager]
 sort_dir_first = true
 linemode = "size"
 show_symlink = true
