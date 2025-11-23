@@ -5,12 +5,19 @@
 	font-family: CommitMono Nerd Font;
 	font-size: 12px;
 	min-height: 12px;
+
+}
+
+
+#waybar {
+	background: @base;
+	color: @color8;
 }
 
 window#waybar {
-	background: rgba(30, 35, 38, 0.85);
-	color: @color8;
+	margin-top: 5px;
 }
+
 
 tooltip {
 	background: @base;
