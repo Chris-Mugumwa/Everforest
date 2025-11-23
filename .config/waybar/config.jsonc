@@ -71,9 +71,8 @@
     },
     "clock": {
         "icon-size": 50,
-        "format": "󰥔 %H:%M  󰃭 %a %d",
-        "on-click": "eww open Calendar --toggle --config ~/.config/eww/applets/",
-        "tooltip-format": "%A %d %B %Y"
+        "format": "󰥔 {:%H:%M}  󰃭 {:%a %d}",
+        "tooltip-format": "{:%A %d %B %Y}"
     },
     "custom/swaync": {
         "tooltip": false,
