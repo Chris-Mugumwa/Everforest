@@ -1,3 +1,5 @@
+@import "colorschemes/catppuccin-mocha.css";
+
 * {
   border: none;
   font-family: CommitMono Nerd Font;
