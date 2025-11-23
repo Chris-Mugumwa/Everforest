@@ -6,6 +6,7 @@
     "passtrough": false,
     "gtk-layer-shell": true,
     "height": 40,
+    "margin-top": 10,
     "modules-left": [
         "hyprland/workspaces",
         "cpu",
@@ -69,9 +70,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "󰥔 %H:%M  󰃭 %a %d",
+        "format": "󰥔 {:%H:%M}  󰃭 {:%a %d}",
         "on-click": "eww open Calendar --toggle --config ~/.config/eww/applets/",
-        "tooltip-format": "%A %d %B %Y"
+        "tooltip-format": "{:%A %d %B %Y}"
     },
     "custom/swaync": {
         "tooltip": false,

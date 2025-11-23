@@ -1,23 +1,23 @@
-@import 'colorschemes/everforest.css';
+@import "colorschemes/everforest.css";
 
 * {
-	border: none;
-	font-family: CommitMono Nerd Font;
-	font-size: 12px;
-	min-height: 12px;
+  border: none;
+  font-family: CommitMono Nerd Font;
+  font-size: 20px;
+  min-height: 32px;
 }
 
 window#waybar {
-	background: rgba(30, 35, 38, 0.85);
-	color: @color8;
+  background-color: transparent;
+  color: #d3c6aa;
 }
 
 tooltip {
-	background: @base;
-	border-color: @crust;
-	border-radius: 10px;
-	border-style: solid;
-	border-width: 2px;
+  background: #1e2326;
+  border-color: #272e33;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
 }
 
 #backlight,
@@ -32,110 +32,110 @@ tooltip {
 #window,
 #mpris,
 #workspaces {
-	background: @crust;
-	border-radius: 8px;
-	border: 1px solid @crust;
-	font-weight: 600;
-	margin: 6px 0 6px 0;
-	padding: 3.5px 16px;
+  background: #272e33;
+  border-radius: 8px;
+  border: 1px solid #272e33;
+  font-weight: 600;
+  margin: 6px 0 6px 0;
+  padding: 3.5px 16px;
 }
 
 #tray {
-	margin-right: 10px;
-	padding-left: 10px;
-	padding-right: 10px;
+  margin-right: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #workspaces {
-	font-weight: Bold;
-	margin-left: 10px;
-	margin-right: 10px;
-	padding-left: 3.5px;
-	padding-right: 3.5px;
+  font-weight: Bold;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left: 3.5px;
+  padding-right: 3.5px;
 }
 
 #workspaces :nth-child(5) {
-	margin-right: 0px;
+  margin-right: 0px;
 }
 
 #workspaces button {
-	border-radius: 6px;
-	color: @color9;
-	padding: 6px;
-	margin-right: 5px;
+  border-radius: 6px;
+  color: #495156;
+  padding: 6px;
+  margin-right: 5px;
 }
 
 #workspaces button.active {
-	background: @color2;
-	color: @color8;
+  background: #a7c080;
+  color: #272e33;
 }
 
 #workspaces button.focused {
-	background: @color7;
-	color: @color8;
+  background: #a7c080;
+  color: #272e33;
 }
 
 #workspaces button.urgent {
-	background: @color4;
-	color: @color8;
+  background: #e67e80;
+  color: #272e33;
 }
 
 #workspaces button:hover {
-	background: @crust;
-	color: @color7;
+  background: #272e33;
+  color: #a7c080;
 }
 
 #window {
-	background: transparent;
-	border-radius: 10px;
-	margin-left: 60px;
-	margin-right: 60px;
+  background: transparent;
+  border-radius: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 #cpu,
 #memory {
-	color: @color1;
+  color: #e69875;
 }
 
 #cpu {
-	border-top-right-radius: 0;
-	border-bottom-right-radius: 0;
-	padding-right: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-right: 0;
 }
 
 #memory {
-	border-top-left-radius: 0;
-	border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 #mpris {
-	color: @color7;
-	margin-left: 10px;
+  color: #a7c080;
+  margin-left: 10px;
 }
 
 #clock {
-	color: @color6;
-	font-weight: 600;
-	margin-right: 10px;
+  color: #e67e80;
+  font-weight: 600;
+  margin-right: 10px;
 }
 
 #custom-swaync {
-	color: @color1;
-	margin-right: 10px;
-	padding-right: 18px;
+  color: #e69875;
+  margin-right: 10px;
+  padding-right: 18px;
 }
 
 #custom-weather {
-	color: @color2;
-	margin-right: 10px;
+  color: #a7c080;
+  margin-right: 10px;
 }
 
 #network {
-	color: @color3;
-	margin-right: 10px;
+  color: #dbbc7f;
+  margin-right: 10px;
 }
 
 #pulseaudio {
-	color: @color5;
-	margin-right: 10px;
+  color: #83c092;
+  margin-right: 10px;
 }
