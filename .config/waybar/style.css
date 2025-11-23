@@ -8,16 +8,10 @@
 
 }
 
-
-#waybar {
+window#waybar {
 	background: @base;
 	color: @color8;
 }
-
-window#waybar {
-	margin-top: 5px;
-}
-
 
 tooltip {
 	background: @base;

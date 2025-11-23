@@ -34,6 +34,7 @@
             "active": "󰮯",
             "urgent": "󰊠"
         },
+        "icon-size": 65,
         "disable-scroll": false,
         "all-outputs": true,
         "active-only": false,
@@ -69,6 +70,7 @@
         "spacing": 10
     },
     "clock": {
+        "icon-size": 50,
         "format": "󰥔 %H:%M  󰃭 %a %d",
         "on-click": "eww open Calendar --toggle --config ~/.config/eww/applets/",
         "tooltip-format": "%A %d %B %Y"
