@@ -20,6 +20,7 @@
         "custom/weather",
         "pulseaudio",
         "clock",
+        "custom/power",
         "custom/swaync"
     ],
     "hyprland/window": {
@@ -34,7 +35,6 @@
             "active": "󰮯",
             "urgent": "󰊠"
         },
-        "icon-size": 65,
         "disable-scroll": false,
         "all-outputs": true,
         "active-only": false,
@@ -65,14 +65,18 @@
         "ignored-players": ["firefox", "chromium", "brave"]
     },
     "tray": {
-        "icon-size": 50,
+        "icon-size": 16,
         "tooltip": false,
         "spacing": 10
     },
     "clock": {
-        "icon-size": 50,
         "format": "󰥔 {:%H:%M}  󰃭 {:%a %d}",
         "tooltip-format": "{:%A %d %B %Y}"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "wlogout",
+        "tooltip": false
     },
     "custom/swaync": {
         "tooltip": false,

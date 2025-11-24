@@ -69,6 +69,47 @@ swaync &
 WAYBAR_STYLE="$THEME_DIR/waybar/style.css"
 sed -i 's|@import "colorschemes/.*\.css";|@import "colorschemes/'"$SELECTED_THEME"'.css";|' "$WAYBAR_STYLE"
 
+# Update Wlogout theme
+WLOGOUT_STYLE="$THEME_DIR/wlogout/style.css"
+sed -i 's|@import "../waybar/colorschemes/.*\.css";|@import "../waybar/colorschemes/'"$SELECTED_THEME"'.css";|' "$WLOGOUT_STYLE"
+
+# Update Spotify theme (if spicetify is installed)
+if command -v spicetify &> /dev/null; then
+    case $SELECTED_THEME in
+        "autumn")
+            spicetify config color_scheme TokyoNight 2>/dev/null || true
+            ;;
+        "catppuccin-mocha")
+            spicetify config color_scheme CatppuccinMocha 2>/dev/null || true
+            ;;
+        "crimson")
+            spicetify config color_scheme Dracula 2>/dev/null || true
+            ;;
+        "everforest")
+            spicetify config color_scheme EverforestDarkMedium 2>/dev/null || true
+            ;;
+        "graphite")
+            spicetify config color_scheme Solarized 2>/dev/null || true
+            ;;
+        "gruvbox")
+            spicetify config color_scheme GruvboxDark 2>/dev/null || true
+            ;;
+        "kanagawa")
+            spicetify config color_scheme Kanagawa 2>/dev/null || true
+            ;;
+        "nightowl")
+            spicetify config color_scheme Nord 2>/dev/null || true
+            ;;
+        "oxocarbon")
+            spicetify config color_scheme TokyoNightStorm 2>/dev/null || true
+            ;;
+        "rosepine")
+            spicetify config color_scheme RosePine 2>/dev/null || true
+            ;;
+    esac
+    spicetify apply 2>/dev/null || true
+fi
+
 # Restart waybar
 pkill waybar
 waybar &
