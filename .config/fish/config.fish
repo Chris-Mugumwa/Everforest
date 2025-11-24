@@ -123,3 +123,5 @@ end
 source ~/.config/fish/completions/aliases.fish
 source ~/.config/lf/icons/icons
 
+
+fish_add_path /home/chris/.spicetify

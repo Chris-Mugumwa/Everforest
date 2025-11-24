@@ -23,6 +23,7 @@ tooltip {
 
 #backlight,
 #cpu,
+#custom-power,
 #custom-swaync,
 #custom-weather,
 #memory,
@@ -138,5 +139,10 @@ tooltip {
 
 #pulseaudio {
 	color: @color5;
+	margin-right: 10px;
+}
+
+#custom-power {
+	color: @color4;
 	margin-right: 10px;
 }
