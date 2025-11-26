@@ -2,14 +2,14 @@
 
 * {
 	border: none;
-	font-family: CommitMono Nerd Font;
-	font-size: 12px;
-	min-height: 12px;
+	font-family: "JetBrains Mono Nerd Font Propo";
+	font-size: 11px;
+	min-height: 10px;
 
 }
 
 window#waybar {
-	background: @base;
+	background:  rgba(30, 35, 38, 0.8);
 	color: @color8;
 }
 
@@ -20,6 +20,7 @@ tooltip {
 	border-style: solid;
 	border-width: 2px;
 }
+
 
 #backlight,
 #cpu,
