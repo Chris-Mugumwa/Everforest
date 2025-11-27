@@ -1,57 +1,28 @@
+@import "./colorschemes/catppuccin-mocha.css";
 @import "./colorschemes/everforest.css";
 
 * {
-  outline: none;
-  font-family: CommitMono Nerd Font;
-  font-size: 21px;
-  text-shadow: none;
-  color: @text-color;
-  background-color: transparent;
-  background: transparent;
+  font-family: Cantarell;
 }
 
-.control-center {
-  background-color: alpha(@cc-bg, 0.8);
-  border: 3px solid @noti-border-color;
-  padding: 7px;
-  animation: slideDown 0.3s ease-out;
+::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
 }
 
-@keyframes slideDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* NOTE: GTK doesn't support webkit-scrollbar or scrollbar-width CSS properties */
-scrollbar {
-  background-color: transparent;
-}
-scrollbar slider {
-  min-width: 2px;
-  min-height: 20px;
-  border-radius: 10px;
-  background-color: alpha(@text-color, 0.2);
-}
-scrollbar slider:hover {
-  background-color: alpha(@text-color, 0.3);
-}
 
 .control-center .notification-row:focus,
 .control-center .notification-row:hover {
   opacity: 1;
-  border-radius: 6px;
+  border-radius: 8px;
   background: transparent;
 }
 
-.control-center .notification-row .notification-background {
-  border-radius: 15px;
-  margin-top: 5px;
+.control-center .notification-default-action,
+.control-center .notification-action {
+  background: @noti-bg;
+  border: 1px solid @noti-border-color;
 }
 
 .control-center .notification-default-action,
@@ -67,49 +38,21 @@ scrollbar slider:hover {
 
 .notification-row {
   outline: green;
-}
+} 
 
 .notification {
-  border-radius: 6px;
-  margin: 4px 4px;
+  border-radius: 8px;
+  /* margin: 4px 4px; */
   box-shadow: none;
   padding: 0;
-  background-color: @noti-bg;
-  border: 2px solid @floating-noti-border-color;
 }
-
-.notification > *:last-child > * {
-  margin: 5px;
-}
-
+ 
 .notification-content {
   border: transparent;
   padding: 1.4rem;
-  border-radius: 6px;
-}
-
-.summary {
-  font-size: 1rem;
-  font-weight: bold;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-}
-.time {
-  font-size: 0.8rem;
-  font-weight: bold;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-  margin-right: 18px;
-}
-.body {
-  font-size: 1rem;
-  font-weight: normal;
-  background: transparent;
-  color: @text-color;
-  text-shadow: none;
-}
+  border-radius: 8px;
+  width: 100%;
+} 
 
 .close-button {
   background: @floating-noti-close-bg;
@@ -123,6 +66,7 @@ scrollbar slider:hover {
   border: none;
   min-width: 24px;
   min-height: 24px;
+  display:none;
 }
 
 .close-button:hover {
@@ -150,7 +94,7 @@ scrollbar slider:hover {
 }
 
 .notification-default-action {
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 /* When alternative actions are visible */
@@ -167,11 +111,11 @@ scrollbar slider:hover {
 
 /* add bottom border radius to eliminate clipping */
 .notification-action:first-child {
-  border-bottom-left-radius: 6px;
+  border-bottom-left-radius: 8px;
 }
 
 .notification-action:last-child {
-  border-bottom-right-radius: 6px;
+  border-bottom-right-radius: 8;
   border-right: 1px solid @floating-noti-border-color;
 }
 
@@ -184,14 +128,14 @@ scrollbar slider:hover {
   color: @text-color;
   caret-color: @text-color;
   border: 1px solid @noti-border-color;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .inline-reply-button {
   margin-left: 4px;
   background: @noti-bg;
   border: 1px solid @noti-border-color;
-  border-radius: 6px;
+  border-radius: 8px;
   color: @text-color;
 }
 
@@ -209,17 +153,44 @@ scrollbar slider:hover {
 }
 
 .body-image {
-  margin-top: 6px;
+  margin-top: 8px;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
-.notification.critical {
-  background-color: alpha(@noti-bg, 0.5);
+.summary {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
 }
-.notification.low,
-.notification.normal {
-  background-color: alpha(@noti-bg, 0.5);
+
+.time {
+  font-size: 16px;
+  font-weight: bold;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+  margin-right: 18px;
+}
+
+.body {
+  font-size: 15px;
+  font-weight: normal;
+  background: transparent;
+  color: @text-color;
+  text-shadow: none;
+}
+
+.control-center {
+  background: @cc-bg;
+  margin: 10px;
+  /* margin-top: 10px; */
+  /* margin-right: 10px; */
+
+  border-radius: 8px;
+  padding: 1rem;
 }
 
 .control-center-list {
@@ -237,72 +208,10 @@ scrollbar slider:hover {
 
 /* Window behind control center and on all other monitors */
 .blank-window {
-  background: alpha(black, 0.2);
-  animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.notification-group-header,
-.notification-group-icon {
-  font-size: 0.9rem;
-}
-
-.notification-group-collapse-button,
-.notification-group-close-all-button {
-  background-color: @noti-bg;
-}
-.notification-group-collapse-button:hover {
-  background-color: alpha(@noti-bg-hover, 0.8);
-}
-.notification-group-close-all-button:hover {
-  background-color: alpha(@noti-bg-hover, 0.8);
+  background: alpha(black, 0);
 }
 
 /*** Widgets ***/
-
-/* Buttons Grid widget */
-.widget-buttons-grid {
-  background: @noti-bg;
-  font-size: 2rem;
-  padding: 10px 10px 10px;
-  margin: 0.4rem;
-  border-radius: 6px;
-  border: 2px solid @noti-border-color;
-}
-.widget-buttons-grid > flowbox {
-  max-children-per-line: 6;
-  min-children-per-line: 3;
-}
-.widget-buttons-grid > flowbox > flowboxchild > button {
-  background: @bg-selected;
-  box-shadow: 0px 0px 10px alpha(@noti-bg, 0.8);
-  border-radius: 12px;
-  min-width: 60px;
-  min-height: 30px;
-  padding: 6px;
-  margin: 0 3px 0;
-  transition: all .5s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.widget-buttons-grid > flowbox > flowboxchild > button:hover {
-  background: @noti-bg-hover;
-}
-.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked {
-  background: @noti-bg-hover;
-}
-.widget-buttons-grid > flowbox > flowboxchild > button.toggle:checked:hover {
-  background: alpha(@noti-bg-hover, 0.8);
-}
 
 /* Title widget */
 .widget-title {
@@ -360,18 +269,14 @@ scrollbar slider:hover {
 .widget-mpris {
   margin: 0.4rem 0.4rem 0.4rem;
   margin-top: 0.4rem;
-  background: @noti-bg;
+  background: @base;
   color: @text-color;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 2px solid @noti-border-color;
 }
 .widget-mpris-player {
   padding: 1rem 1rem 0 1rem;
   margin: 0;
-}
-.widget-mpris .widget-mpris-album-art {
-  border-radius: 12px;
-  box-shadow: 0px 0px 10px alpha(@noti-bg, 0.5);
 }
 .widget-mpris-title {
   font-weight: bold;
@@ -381,28 +286,27 @@ scrollbar slider:hover {
   font-size: 12px;
   margin-bottom: 1.4rem;
 }
+.widget-notifications {
+  font-size: 96px;
+  background-color: #000;
+}
 
+.widget-notification
 .widget-mpris > box > button {
   padding: 0;
   margin: 0;
 }
-.widget-mpris > box > button:hover {
-  background: alpha(@noti-bg-hover, 0.6);
-}
 
-.topbar-buttons > button {
-  border: none;
-  background: transparent;
-}
 
 /* Volume widget */
+
 .widget-volume {
   background-color: @noti-bg;
   color: @text-color;
   margin: 0.4rem;
   margin-bottom: 1rem;
   padding: 0.8rem 1.4rem 0.8rem 1.4rem;
-  border-radius: 6px;
+  border-radius: 8px;
   border: 2px solid @noti-border-color;
   font-size: 22px;
 }
@@ -416,26 +320,5 @@ scrollbar slider:hover {
   background-color: @noti-bg;
   padding: 4px 8px 8px 8px;
   margin: 0px 8px 8px 8px;
-  border-radius: 6px;
-}
-
-scale trough {
-  margin: 0rem 1rem;
-  background-color: @noti-bg;
-  min-height: 4px;
-  min-width: 70px;
-}
-
-trough slider {
-  background: @bg-selected;
-}
-trough slider:hover {
-  background: @noti-bg-hover;
-}
-trough highlight {
-  background: @noti-bg-hover;
-}
-
-tooltip {
-  background-color: @noti-bg;
+  border-radius: 8px;
 }

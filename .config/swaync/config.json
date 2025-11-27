@@ -2,40 +2,33 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
-  "cssPriority": "user",
-
   "layer": "overlay",
   "control-center-layer": "top",
   "layer-shell": true,
-
-  "control-center-width": 630,
-  "control-center-height": 950,
-  "control-center-margin-top": 8,
-  "control-center-margin-right": 8,
-  "control-center-margin-left": 0,
+  "cssPriority": "application",
+  "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
-
-  "notification-window-width": 600,
-  "notification-icon-size": 50,
-  "notification-body-image-height": 200,
-  "notification-body-image-width": 200,
-
-  "timeout": 4,
-  "timeout-low": 2,
-  "timeout-critical": 6,
-
-  "fit-to-screen": false,
-  "keyboard-shortcuts": true,
-  "image-visibility": "when-available",
-  "transition-time": 100,
-  "hide-on-clear": false,
-  "hide-on-action": false,
-  "text-empty": "No Notifications",
-  "script-fail-notify": true,
-
+  "control-center-margin-right": 0,
+  "control-center-margin-left": 0,
   "notification-2fa-action": false,
   "notification-inline-replies": false,
+  "notification-icon-size": 64,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": false,
+  "control-center-width": 450,
+  "control-center-height": 800,
+  "notification-window-width": 400,
 
+  "keyboard-shortcuts": true,
+  "image-visibility": "when-available",
+  "transition-time": 0,
+  "hide-on-clear": false,
+  "hide-on-action": true,
+  "script-fail-notify": true,
   "scripts": {
     "example-script": {
       "exec": "echo 'Do something...'",
@@ -53,79 +46,73 @@
       "urgency": "Low",
       "app-name": "Spotify"
     }
-  },
+  }, 
   "widgets": [
     "buttons-grid",
+    "title",
     "mpris",
     "volume",
-    "dnd",
-    "title",
-    "notifications"
+    "notifications",
+    "backlight"
   ],
   "widget-config": {
-    "mpris": {
-      "image-size": 70,
-      "image-radius": 0
-    },
-    "volume": {
-      "label": " 󰕾 ",
-      "expand-button-label": " ",
-      "collapse-button-label": " ",
-      "show-per-app": true,
-      "show-per-app-icon": true,
-      "show-per-app-label": false
-    },
-    "dnd": {
-      "text": "Do Not Disturb"
-    },
     "title": {
       "text": "Notifications",
       "clear-all-button": true,
-      "button-text": ""
+      "button-text": "Clear"
     },
-    "notifications": {
-      "clear-all-button": true,
-      "show-per-app": false
+
+
+    "mpris": {
+      "image-size": 80,
+      "image-radius": 10
+    },
+    "volume": {
+      "label": "",
+      "step": 5
+    },
+    "backlight": {
+      "label": "󰃞",
+      "step": 5
     },
     "buttons-grid": {
       "actions": [
         {
-          "label": " ",
+          "label": "",
+          "command": "kitty nmtui",
+          "tooltip": "Network"
+        },
+        {
+          "label": "",
+          "command": "blueman-manager",
+          "tooltip": "Bluetooth"
+        },
+        {
+          "label": "󰂛",
+          "command": "swaync-client -d",
           "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && nmcli radio wifi on || nmcli radio wifi off'",
-          "update-command": "sh -c '[[ $(nmcli r wifi) == \"enabled\" ]] && echo true || echo false'"
+          "tooltip": "DND"
         },
         {
-          "label": "󰂯",
-          "type": "toggle",
-          "active": true,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && rfkill unblock bluetooth || rfkill block bluetooth'",
-          "update-command": "sh -c \"rfkill list bluetooth | grep -q \"Soft blocked: no\" && echo true || echo false\""
+          "label": "󰍜",
+          "command": "gnome-network-displays",
+          "tooltip": "Screens"
         },
         {
-          "label": " ",
-          "type": "toggle",
-          "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == false ]] && pactl set-source-mute @DEFAULT_SOURCE@ 1 || pactl set-source-mute @DEFAULT_SOURCE@ 0'",
-          "update-command": "sh -c '[[ $(pactl get-source-mute @DEFAULT_SOURCE@) == *yes* ]] && echo false || echo true'"
+          "label": "󰈙",
+          "command": "kitty bash -i -c 'Docs'",
+          "tooltip": "Files"
         },
         {
-          "label": " ",
-          "type": "toggle",
-          "active": false,
-          "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && pactl set-sink-mute @DEFAULT_SINK@ 1 || pactl set-sink-mute @DEFAULT_SINK@ 0'",
-          "update-command": "sh -c '[[ $(pactl get-sink-mute @DEFAULT_SINK@) == *yes* ]] && echo true || echo false'"
+          "label": "",
+          "command": "kitty bash -i -c 'Settings'",
+          "tooltip": "Settings"
         },
         {
-          "label": "󰸉 ",
-          "command": "~/.config/rofi/wallpaper-selector.sh"
-        },
-        {
-          "label": "󰋖 ",
-          "command": "kitty --title 'Keybindings' --hold sh -c 'cat ~/.config/hypr/keybindings.conf'"
+          "label": "",
+          "command": "hyprlock",
+          "tooltip": "Lock"
         }
       ]
-    }
-  }
+        }    }
 }

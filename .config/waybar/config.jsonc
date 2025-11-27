@@ -46,12 +46,12 @@
     },
     "cpu": {
         "interval": 5,
-        "format": "<span font='14' rise='-2500'></span>  {usage}%",
+        "format": "<span font='15' rise='-3000'></span>  {usage}%",
         "max-length": 10
     },
     "memory": {
         "interval": 30,
-        "format": "<span font='12' rise='-1000'></span>  {used:0.1f}G/{total:0.1f}G"
+        "format": "<span font='12.5' rise='-1500'></span>  {used:0.1f}G/{total:0.1f}G"
     },
     "mpris": {
         "format": "{player_icon}  {title} | {artist} - {length}",
