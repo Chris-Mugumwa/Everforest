@@ -46,7 +46,7 @@ map("i", "<C-h>", "<Esc>caw", { noremap = true })
 map("n", "<leader>s", ":setlocal spell spelllang=en_us<CR>", { desc = "Turn on spell check" })
 
 -- Session Manager
-map("n", "<C-s>", require("auto-session.session-lens").search_session, { desc = "Project hop" })
+map("n", "<C-s>", "<cmd>SessionSearch<CR>", { desc = "Project hop" })
 
 -- Formatter
 map("n", "<Space>f", function()
