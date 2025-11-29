@@ -4,7 +4,7 @@ require("core.keybindings")
 require("core.autocmd")
 -- require("core.kittymargin") -- won't work with any terminal other than kitty
 
-vim.cmd.colorscheme("everforest")
+vim.cmd.colorscheme("catppuccin")
 
 -- neovide configuration
 if vim.g.neovide then
