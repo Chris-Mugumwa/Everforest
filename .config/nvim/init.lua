@@ -2,9 +2,9 @@ require("core.settings")
 require("core.lazy")
 require("core.keybindings")
 require("core.autocmd")
--- require("core.kittymargin") -- won't work with any terminal other than kitty
+require("core.kittymargin") -- won't work with any terminal other than kitty
 
-vim.cmd.colorscheme("catppuccin")
+vim.cmd.colorscheme("everforest")
 
 -- neovide configuration
 if vim.g.neovide then
