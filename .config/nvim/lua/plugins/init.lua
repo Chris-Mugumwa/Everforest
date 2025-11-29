@@ -1,12 +1,21 @@
 return {
 
-	-- Colorscheme
+	-- Colorschemes
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
 		config = function()
 			require("plugins.configs.catppuccin")
+		end,
+	},
+
+	{
+		"sainnhe/everforest",
+		priority = 1000,
+		config = function()
+			vim.g.everforest_background = "hard"
+			vim.g.everforest_better_performance = 1
 		end,
 	},
 
