@@ -15,7 +15,8 @@
     "modules-center": [
     ],
     "modules-right": [
-        // "tray",
+        "custom/privacy-dots",
+        "tray",
         "network",
         "custom/weather",
         "pulseaudio",
@@ -66,21 +67,26 @@
     },
     
     "tray": {
-        "icon-size": 32,
+        "icon-size": 16,
         "tooltip": false,
-        "spacing": 10
+        "spacing": 10,
+        "show-passive-items": true,
+        "icons": {
+            "discord": "/opt/discord/discord.png",
+            "spotify": "/usr/share/applications/spotify-launcher.desktop"
+        },
+        "discord": {
+            "on-click": "exec discord"
+        },
+
+        "spotify": {
+            "on-click": "exec spotify-launcher"
+        }
     },
     "clock": {
 		"format": "{:%I:%M %p}",
 		"rotate": 0,
-		"format-alt": "{:%R 󰃭 %d·%m·%y}",
-		"actions": {
-			"on-click-right": "mode",
-			"on-click-forward": "tz_up",
-			"on-click-backward": "tz_down",
-			"on-scroll-up": "shift_up",
-			"on-scroll-down": "shift_down"
-		}
+        "tooltip": false
 	},
     "custom/power": {
         "format": "<span font='12' rise='-2500'>⏻</span>",
@@ -106,6 +112,15 @@
         "on-click": "~/.config/swaync/scripts/open-tray.sh",
         "on-click-right": "swaync-client -d -sw",
         "escape": true
+    },
+        "custom/privacy-dots": {
+        "exec": "privacy-dots", // or if installed from AUR: "exec": "privacy-dots",
+        "return-type": "json",
+        "interval": 3,
+        "format": "{text}",
+        "tooltip": true,
+        "escape": false,
+        "markup": "pango"
     },
     "network": {
         "format": "{ifname}",
