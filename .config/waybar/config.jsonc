@@ -86,7 +86,8 @@
     "clock": {
 		"format": "{:%I:%M %p}",
 		"rotate": 0,
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "~/.config/waybar/scripts/calendar.sh"
 	},
     "custom/power": {
         "format": "<span font='12' rise='-2500'>⏻</span>",
