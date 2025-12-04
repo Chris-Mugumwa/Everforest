@@ -71,3 +71,9 @@ fi
 
 # Path
 export PATH="$VOLTA_HOME/bin:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share:$HOME/go/bin:$PATH"
+
+# Fastfetch - run only on first terminal of session
+if [[ ! -f /tmp/.fastfetch-ran-$UID ]]; then
+    command -v fastfetch &>/dev/null && fastfetch
+    touch /tmp/.fastfetch-ran-$UID
+fi
