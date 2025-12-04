@@ -1,0 +1,40 @@
+# Root symlinks (already have .config/ versions)
+/bspwm
+/discord
+/dunst
+/eww
+/fastfetch
+/firefox
+/fish
+/heroic-launcher
+/hypr
+/kitty
+/lf
+/mpv
+/neofetch
+/nvim
+/rofi
+/spotify
+/starship.toml
+/swaync
+/waybar
+/wezterm
+/wlogout
+/yazi
+/zsh
+
+# Spotify user data (personal/sensitive)
+.config/spotify/Users/
+.config/spotify/prefs
+
+# Yazi temp/backup files
+.config/yazi/*.toml-*
+
+# Claude Code working directory
+.claude/
+
+# General
+.DS_Store
+*.log
+*.bak
+*~
