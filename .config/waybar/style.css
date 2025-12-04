@@ -34,6 +34,7 @@ tooltip {
 #clock,
 #window,
 #mpris,
+#custom-privacy-dots,
 #workspaces {
 	background: @crust;
 	border-radius: 8px;
@@ -130,6 +131,10 @@ tooltip {
 
 #custom-weather {
 	color: @color2;
+	margin-right: 10px;
+}
+
+#custom-privacy-dots {
 	margin-right: 10px;
 }
 
