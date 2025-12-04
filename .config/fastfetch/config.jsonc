@@ -18,7 +18,9 @@
 		"left": 2
     	}
     },
-
+	"display": {
+		"separator": " "
+	},
 	"modules": [
 		{
 			"type": "title",
