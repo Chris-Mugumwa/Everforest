@@ -13,6 +13,7 @@
         "mpris"
     ],
     "modules-center": [
+        "clock",
     ],
     "modules-right": [
         "custom/privacy-dots",
@@ -20,7 +21,6 @@
         "network",
         "custom/weather",
         "pulseaudio",
-        "clock",
         "custom/swaync",
         "custom/power"
     ],
@@ -84,7 +84,7 @@
         }
     },
     "clock": {
-		"format": "{:%I:%M %p}",
+		"format": "{:%H:%M %p - %d %B}",
 		"rotate": 0,
         "tooltip": false,
         "on-click": "~/.config/waybar/scripts/calendar.sh"

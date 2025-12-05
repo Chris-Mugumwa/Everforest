@@ -31,7 +31,6 @@ tooltip {
 #network,
 #pulseaudio,
 #tray,
-#clock,
 #window,
 #mpris,
 #custom-privacy-dots,
@@ -118,9 +117,8 @@ tooltip {
 }
 
 #clock {
-	color: @color6;
+	color: @color2;
 	font-weight: 600;
-	margin-right: 10px;
 }
 
 #custom-swaync {
