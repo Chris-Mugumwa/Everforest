@@ -27,6 +27,7 @@ tooltip {
 #custom-power,
 #custom-swaync,
 #custom-weather,
+#clock,
 #memory,
 #network,
 #pulseaudio,
@@ -119,6 +120,7 @@ tooltip {
 #clock {
 	color: @color2;
 	font-weight: 600;
+	margin-right: 10px;
 }
 
 #custom-swaync {

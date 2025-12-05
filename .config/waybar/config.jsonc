@@ -13,12 +13,13 @@
         "mpris"
     ],
     "modules-center": [
-        "clock",
+
     ],
     "modules-right": [
         "custom/privacy-dots",
         "tray",
         "network",
+        "clock",
         "custom/weather",
         "pulseaudio",
         "custom/swaync",
@@ -86,8 +87,7 @@
     "clock": {
 		"format": "{:%H:%M %p - %d %B}",
 		"rotate": 0,
-        "tooltip": false,
-        "on-click": "~/.config/waybar/scripts/calendar.sh"
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
 	},
     "custom/power": {
         "format": "<span font='12' rise='-2500'>⏻</span>",
