@@ -18,11 +18,11 @@
     "modules-right": [
         "custom/privacy-dots",
         "tray",
-        "bluetooth",
         "network",
         "clock",
         "custom/weather",
         "pulseaudio",
+        "bluetooth",
         "custom/swaync",
         "custom/power"
     ],
