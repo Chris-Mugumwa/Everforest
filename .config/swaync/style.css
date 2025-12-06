@@ -1,17 +1,20 @@
+/* Everforest Theme for Swaync */
+@import 'colorschemes/everforest.css';
 
 :root {
-  --cc-bg: rgba(46, 46, 46, 0.7);
-  --noti-border-color: rgba(255, 255, 255, 0.15);
-  --noti-bg: 38, 38, 38;
+  /* Everforest color palette */
+  --cc-bg: rgba(30, 35, 38, 0.85);               /* #1e2326 with transparency */
+  --noti-border-color: #4f5b58;                  /* Everforest border */
+  --noti-bg: 30, 35, 38;                         /* #1e2326 as RGB for rgba() */
   --noti-bg-alpha: 0.95;
-  --noti-bg-darker: rgb(38, 38, 38);
-  --noti-bg-hover: rgb(56, 56, 56);
-  --noti-bg-focus: rgba(68, 68, 68, 0.6);
-  --noti-close-bg: rgb(78, 78, 78);
-  --noti-close-bg-hover: rgb(94, 94, 94rgba(68, 68, 68, 0.6));
-  --text-color: rgb(255, 255, 255);
-  --text-color-disabled: rgb(150, 150, 150);
-  --bg-selected: rgb(0, 128, 255);
+  --noti-bg-darker: #232a2e;
+  --noti-bg-hover: #272e33;                      /* Everforest crust */
+  --noti-bg-focus: rgba(39, 46, 51, 0.6);        /* #272e33 with alpha */
+  --noti-close-bg: #374145;
+  --noti-close-bg-hover: #4f5b58;
+  --text-color: #d3c6aa;                         /* Everforest foreground */
+  --text-color-disabled: #495156;
+  --bg-selected: #a7c080;                        /* Everforest green */
   --notification-icon-size: 64px;
   --notification-app-icon-size: calc(var(--notification-icon-size) / 3);
   --notification-group-icon-size: 32px;

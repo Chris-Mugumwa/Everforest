@@ -1,0 +1,26 @@
+# AUR Packages for Hyprland Desktop
+# Install with: paru -S --needed - < pkglist-aur.txt
+
+# Widgets
+eww
+
+# OSD
+swayosd-git
+
+# Rofi Extensions
+rofi-emoji
+
+# Privacy Indicator
+privacy-dots-git
+
+# Theming
+everforest-gtk-theme-git
+
+# Hyprland Plugins
+hyprscroller-git
+
+# Browser
+zen-browser-bin
+
+# Spotify
+spotify-launcher

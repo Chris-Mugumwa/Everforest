@@ -18,6 +18,7 @@
     "modules-right": [
         "custom/privacy-dots",
         "tray",
+        "bluetooth",
         "network",
         "clock",
         "custom/weather",
@@ -161,5 +162,16 @@
         "return-type": "",
         "tooltip": true,
         "exec-tooltip": "curl -s 'wttr.in/?format=3'"
+    },
+    "bluetooth": {
+        "format": "<span font='14' rise='-2500'>󰂯</span>",
+        "format-connected": "<span font='14' rise='-2500'>󰂱</span> {device_alias}",
+        "format-connected-battery": "<span font='14' rise='-2500'>󰂱</span> {device_alias} {device_battery_percentage}%",
+        "format-disabled": "<span font='14' rise='-2500'>󰂲</span>",
+        "format-off": "<span font='14' rise='-2500'>󰂲</span>",
+        "tooltip-format": "{controller_alias}\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "on-click": "blueman-manager"
     }
 }

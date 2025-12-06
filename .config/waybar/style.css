@@ -23,6 +23,7 @@ tooltip {
 
 
 #backlight,
+#bluetooth,
 #cpu,
 #custom-power,
 #custom-swaync,
@@ -150,5 +151,10 @@ tooltip {
 
 #custom-power {
 	color: @color4;
+	margin-right: 10px;
+}
+
+#bluetooth {
+	color: @color0;
 	margin-right: 10px;
 }

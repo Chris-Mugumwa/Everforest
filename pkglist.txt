@@ -1,0 +1,71 @@
+# Hyprland Desktop Environment Dependencies
+# Install with: sudo pacman -S --needed - < pkglist.txt
+
+# Window Manager & Core
+hyprland
+xdg-desktop-portal-hyprland
+xdg-desktop-portal-gtk
+
+# Bar & Notifications
+waybar
+swaync
+
+# Terminal & Shell
+kitty
+fish
+starship
+
+# Launcher & Menus
+rofi-wayland
+wlogout
+
+# Wallpaper & Theming
+swww
+papirus-icon-theme
+qt5-wayland
+qt6-wayland
+
+# Bluetooth
+blueman
+bluez
+bluez-utils
+
+# Audio
+pipewire
+pipewire-pulse
+pipewire-alsa
+wireplumber
+pamixer
+playerctl
+
+# Network
+networkmanager
+network-manager-applet
+
+# Clipboard
+wl-clipboard
+cliphist
+
+# Screenshots & Recording
+grim
+slurp
+wf-recorder
+
+# Utilities
+jq
+polkit-gnome
+brightnessctl
+swayidle
+swaylock
+
+# Fonts
+ttf-jetbrains-mono-nerd
+ttf-font-awesome
+noto-fonts
+noto-fonts-emoji
+
+# File Manager
+nemo
+
+# Gaming (optional - for gaming partition)
+steam
