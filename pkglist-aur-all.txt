@@ -1,0 +1,10 @@
+android-studio
+bibata-cursor-theme
+eww
+gtk-engine-murrine
+privacy-dots
+redhat-fonts
+sddm-silent-theme
+spicetify-cli
+spotify
+vscodium-bin

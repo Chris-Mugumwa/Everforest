@@ -65,7 +65,7 @@
 }
 
 .notification-row .notification-background {
-  padding: 6px 12px;
+  padding: 2px;
 }
 
 .notification-row .notification-background .notification {
@@ -91,7 +91,7 @@
 
 .notification-row .notification-background .notification .notification-default-action {
   /* The large action that also displays the notification summary and body */
-  padding: 4px;
+  padding: 6px;
   margin: 0;
   box-shadow: none;
   background: transparent;

@@ -8,7 +8,7 @@
   "layer-shell": true,
   "layer-shell-cover-screen": true,
   "cssPriority": "user",
-  "control-center-margin-top": 20,
+  "control-center-margin-top": 10,
   "control-center-margin-bottom": 450,
   "control-center-margin-right": 0,
   "control-center-margin-left": 0,
@@ -114,12 +114,7 @@
         "command": "sh -c '[[ $SWAYNC_TOGGLE_STATE == true ]] && bluetoothctl power on || bluetoothctl power off'",
         "update-command": "bluetoothctl show | grep -q 'Powered: yes' && echo true || echo false"
       },
-      {
-        "label": "",
-        "type": "toggle",
-        "command": "if [ \"$SWAYNC_TOGGLE_STATE\" = \"true\" ]; then hyprctl dispatch exec 'hyprsunset --temperature 6000'; else pkill -INT hyprsunset; fi",
-        "update-command": "pgrep -x hyprsunset >/dev/null && echo true || echo false"
-      },
+
       {
         "label": "",
         "type": "toggle",
