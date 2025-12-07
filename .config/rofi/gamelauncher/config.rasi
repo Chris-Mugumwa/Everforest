@@ -1,6 +1,6 @@
 configuration {
     font:                       "CommitMono Nerd Font Semibold 11";
-    show-icons:                 true;
+    show-icons:                 false;
 }
 
 /*****----- Global Properties -----*****/
